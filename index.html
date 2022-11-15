@@ -26,21 +26,27 @@
 
         <!-- Form -->
         <form class="form-task" @submit.prevent="addToDo">
-            <input type="text" v-model="newToDo">
+            <input type="text" v-model="newToDo" required>
             <button type="submit">Aggiungi</button>
         </form>
         <!-- Form -->
 
         <!-- Task container -->
         <div class="task-container">
-            <ul>
-                <li class="task" v-for="todo in toDoList">
+
+            <ul v-if="toDoList.length > 0">
+                <li class="task" v-for="(todo, index) in toDoList" >
                     {{todo.text}}
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-xmark" @click="removeToDo(index)"></i>
                 </li>
-                
             </ul>
+
+            <h2 v-else>Non sono presenti to do 😇 </h2>
+
         </div>
+        <!-- Task container -->
+
+
 
 
 
