@@ -3,7 +3,10 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        newToDo: '',
+
         toDoList: [
+
             {
                 text: 'fare i compiti',
                 done: 'true'
@@ -21,7 +24,7 @@ const { createApp } = Vue
     },
     methods:{
         addToDo(){
-           console.log('submittato') 
+           this.toDoList.push(this.newToDo)
         }
     }
   }).mount('#app')
