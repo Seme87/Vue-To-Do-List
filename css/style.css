@@ -47,6 +47,10 @@ img{
    
 }
 
+.active{
+    text-decoration: line-through;
+}
+
 .form-task button{
     padding: 5px 15px;
     border-radius: 10px;
