@@ -9,15 +9,15 @@ const { createApp } = Vue
 
             {
                 text: 'fare i compiti',
-                done: 'true'
+                done: 'false',
             },
             {
                 text: 'fare la spesa',
-                done: 'false'
+                done: 'false',
             },
             {
                 text: 'fare esercizio Boolean',
-                done: 'true'
+                done: 'true',
             },
         ]
       }
